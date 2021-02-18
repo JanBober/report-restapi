@@ -20,7 +20,8 @@ public class ReportDtoMapper {
         return ReportDto.builder()
                 .id(report.getId())
                 .name(report.getName())
-                .created(report.getCreated())
+                .date(report.getDate())
+                .time(report.getTime())
                 .build();
     }
 }
