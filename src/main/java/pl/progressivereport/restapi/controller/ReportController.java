@@ -24,7 +24,7 @@ public class  ReportController {
         return reportService.getSingleReport(id);
     }
 
-    @PostMapping("/reports/")
+    @PostMapping("/reports")
     public Report addReport(@RequestBody Report report) {
         return reportService.addReport(report);
     }
