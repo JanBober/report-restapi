@@ -1,13 +1,18 @@
 package pl.progressivereport.restapi.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import pl.progressivereport.restapi.controller.dto.ReportDto;
+import pl.progressivereport.restapi.model.NotificationMessage;
 import pl.progressivereport.restapi.model.Report;
 import pl.progressivereport.restapi.service.ReportService;
 
 import java.util.List;
 
+@Controller
 @RestController
 @RequiredArgsConstructor
 public class  ReportController {
@@ -37,5 +42,11 @@ public class  ReportController {
     @DeleteMapping("/reports/{id}")
     public void deleteReport(@PathVariable long id) {
         reportService.deleteReport(id);
+    }
+
+    @MessageMapping("/notification")
+    @SendTo("/topic/messages")
+    public NotificationMessage get(NotificationMessage notificationMessage) {
+        return notificationMessage;
     }
 }
