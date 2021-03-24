@@ -24,7 +24,7 @@ public class  ReportController {
         return reportService.getSingleReport(id);
     }
 
-    @PostMapping("/reports/")
+    @PostMapping("/reports")
     public Report addReport(@RequestBody Report report) {
         return reportService.addReport(report);
     }
@@ -38,4 +38,5 @@ public class  ReportController {
     public void deleteReport(@PathVariable long id) {
         reportService.deleteReport(id);
     }
+
 }

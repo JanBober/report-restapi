@@ -31,6 +31,8 @@ public class ReportService {
     public Report editReport(Report report) {
         Report reportEdited = reportRepository.findById(report.getId()).orElseThrow();
         reportEdited.setName(report.getName());
+        reportEdited.setDate(report.getDate());
+        reportEdited.setTime(report.getTime());
         return reportEdited;
     }
 
