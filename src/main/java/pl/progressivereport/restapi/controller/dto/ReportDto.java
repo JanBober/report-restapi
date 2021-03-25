@@ -10,4 +10,5 @@ public class ReportDto {
     private String name;
     private String date;
     private String time;
+    private boolean update;
 }

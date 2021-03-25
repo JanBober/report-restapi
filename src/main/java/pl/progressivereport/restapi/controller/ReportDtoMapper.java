@@ -22,6 +22,7 @@ public class ReportDtoMapper {
                 .name(report.getName())
                 .date(report.getDate())
                 .time(report.getTime())
+                .update(report.isUpdate())
                 .build();
     }
 }

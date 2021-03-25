@@ -18,4 +18,5 @@ public class Report {
     private String name;
     private String date;
     private String time;
+    private boolean update;
 }

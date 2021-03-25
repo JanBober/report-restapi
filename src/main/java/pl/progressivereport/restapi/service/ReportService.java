@@ -33,6 +33,7 @@ public class ReportService {
         reportEdited.setName(report.getName());
         reportEdited.setDate(report.getDate());
         reportEdited.setTime(report.getTime());
+        reportEdited.setUpdate(report.isUpdate());
         return reportEdited;
     }
 
