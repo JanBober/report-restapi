@@ -45,7 +45,7 @@ public class  ReportController {
     }
 
     @MessageMapping("/notification")
-    @SendTo("/topic/messages")
+    @SendTo("/notification")
     public NotificationMessage get(NotificationMessage notificationMessage) {
         return notificationMessage;
     }
