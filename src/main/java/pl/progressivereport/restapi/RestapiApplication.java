@@ -15,7 +15,7 @@ public class RestapiApplication {
 
 	@GetMapping
 	public String get() {
-		return "Elu";
+		return "author Jan Bober - Android Developer";
 	}
 
 }
